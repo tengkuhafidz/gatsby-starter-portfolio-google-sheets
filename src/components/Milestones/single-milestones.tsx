@@ -1,4 +1,5 @@
 import React from 'react'
+import { Project } from '../../models'
 
 interface Props {
   project: Project
@@ -16,9 +17,9 @@ const SingleProject: React.FC<Props> = ({ project: { title, description, status,
       className="col-auto bg-white p-4 shadow rounded-lg hover:shadow-lg cursor-pointer"
       onClick={() => handleNavigate()}
     >
+      <span className={`font-light bg-black text-gray-100 px-1 mx-1`}>{status}</span>
       <h4 className="font-bold text-lg">{title}</h4>
       <p>{description}</p>
-      <span className={`font-light bg-gray-500 text-gray-100 px-1 mx-1`}>{status}</span>
     </div>
   )
 }
