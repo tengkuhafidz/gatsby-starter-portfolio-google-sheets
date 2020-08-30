@@ -1,3 +1,4 @@
+require('dotenv').config()
 /* eslint-disable @typescript-eslint/camelcase */
 module.exports = {
   siteMetadata: {
@@ -14,6 +15,26 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: 'gatsby-source-google-sheets-flexible',
+      options: {
+        apiKey: process.env.GATSBY_GOOGLE_CREDENTIALS,
+        spreadsheetUrl: process.env.GATSBY_SHEET_URL,
+        tabName: 'projects',
+        cellRange: 'A1:D1000',
+        majorDimension: 'ROWS',
+      },
+    },
+    {
+      resolve: 'gatsby-source-google-sheets-flexible',
+      options: {
+        apiKey: process.env.GATSBY_GOOGLE_CREDENTIALS,
+        spreadsheetUrl: process.env.GATSBY_SHEET_URL,
+        tabName: 'milestones',
+        cellRange: 'A1:D1000',
+        majorDimension: 'ROWS',
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

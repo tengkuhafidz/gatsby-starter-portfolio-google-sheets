@@ -6152,6 +6152,13 @@ gatsby-recipes@^0.1.58:
     ws "^7.3.0"
     xstate "^4.11.0"
 
+gatsby-source-google-sheets-flexible@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/gatsby-source-google-sheets-flexible/-/gatsby-source-google-sheets-flexible-1.0.3.tgz#a4ea77eebfc1d5d3aae3bc917105f11ad79b7cf4"
+  integrity sha512-nl6dJ4fkZ9k+7oduiGF414vRgE2aROxtBB/xlE7bye5oZA0JEsevbgXpemrdZI1/E/anbfWLY5G7EGxr4n2kJg==
+  dependencies:
+    axios "^0.19.2"
+
 gatsby-telemetry@^1.3.24:
   version "1.3.24"
   resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-1.3.24.tgz#4800bdd1cd8fe1bbdf3433b5d8ba96d611120cd9"

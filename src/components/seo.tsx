@@ -9,7 +9,7 @@ enum TwitterCard {
 }
 
 interface Props {
-  title?: StringLiteral
+  title?: string
   description?: string
   image?: string
   twitterCard?: TwitterCard
