@@ -9,6 +9,6 @@ export const socials = [
   },
   {
     faClass: 'fa-instagram',
-    url: 'https://www.twitter.com/sohafidz',
+    url: 'https://www.instagram.com/sohafidz',
   },
 ]
