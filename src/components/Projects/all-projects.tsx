@@ -19,7 +19,7 @@ const Projects: React.FC = () => {
   const renderItems = () => {
     return allProjectsSheetsData.nodes.map((project) => <SingleProject project={project} key={project.id} />)
   }
-  return <div className="grid grid-cols-4 gap-4">{renderItems()}</div>
+  return <div className="grid md:grid-cols-4 gap-4">{renderItems()}</div>
 }
 
 export default Projects

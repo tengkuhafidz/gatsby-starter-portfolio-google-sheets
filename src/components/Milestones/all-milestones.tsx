@@ -16,10 +16,19 @@ const Projects: React.FC = () => {
       }
     }
   `)
+
+  const sortedMilestones = allMilestonesSheetsData.nodes.sort((a, b) => {
+    const dateA = new Date(a.status)
+    const dateB = new Date(b.status)
+    return dateB - dateA
+  })
+
+  console.log('sortedMilestones', sortedMilestones)
+
   const renderItems = () => {
-    return allMilestonesSheetsData.nodes.map((project) => <SingleProject project={project} key={project.id} />)
+    return sortedMilestones.map((project) => <SingleProject project={project} key={project.id} />)
   }
-  return <div className="grid grid-cols-4 gap-4">{renderItems()}</div>
+  return <div className="grid md:grid-cols-4 gap-4">{renderItems()}</div>
 }
 
 export default Projects
